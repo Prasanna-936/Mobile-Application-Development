@@ -93,8 +93,8 @@ Registeration Number : 212221040115
 
 ## OUTPUT:
 
-![image](https://github.com/NaveenKumar-008/Mobile-Application-Development/assets/128135244/77a1c2a1-f394-4c6e-a41e-47c6a431c8db)  
-![image](https://github.com/NaveenKumar-008/Mobile-Application-Development/assets/128135244/16b3bf1e-d17c-4ac4-8885-e43527f7bc4c)  
+![image](https://github.com/nithish143257/Mobile-Application-Development/assets/113762839/6ecbf782-487f-4f52-afa6-34c32b00280c)  
+![image](https://github.com/nithish143257/Mobile-Application-Development/assets/113762839/fa00e093-8fab-4224-bf02-93bbf9f16744)
 
 
 ## RESULT:
