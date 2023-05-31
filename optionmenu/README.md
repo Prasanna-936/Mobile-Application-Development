@@ -93,8 +93,8 @@ Registeration Number : 212221040115
 
 ## OUTPUT:
 
-![image](https://github.com/nithish143257/Mobile-Application-Development/assets/113762839/6ecbf782-487f-4f52-afa6-34c32b00280c)  
-![image](https://github.com/nithish143257/Mobile-Application-Development/assets/113762839/fa00e093-8fab-4224-bf02-93bbf9f16744)
+![image](https://github.com/nithish143257/Mobile-Application-Development/assets/113762839/91502059-7bfa-400e-b245-bccb7255d188)  
+![image](https://github.com/nithish143257/Mobile-Application-Development/assets/113762839/40655ae9-d214-4945-b378-947b6b1baf2b)
 
 
 ## RESULT:
