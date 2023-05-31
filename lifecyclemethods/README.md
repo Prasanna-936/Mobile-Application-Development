@@ -126,25 +126,25 @@ public class MainActivity extends AppCompatActivity {
 ## OUTPUT:
 
 ## onStart()
-![image](https://github.com/NaveenKumar-008/Mobile-Application-Development/assets/128135244/8cba54f1-6212-4df0-bcdb-f63968180a8c)
+![image](https://github.com/nithish143257/Mobile-Application-Development/assets/113762839/3858cc64-15b0-4be2-8425-a178ddbb5fb4)
 
 ## onCreate()
-![image](https://github.com/NaveenKumar-008/Mobile-Application-Development/assets/128135244/9cb0a129-1e6e-4070-9d46-e883a3c5ffa8)
+![image](https://github.com/nithish143257/Mobile-Application-Development/assets/113762839/8431d341-58ea-4630-aaef-509be30ff2b1)
 
 ## onRestart()
-![image](https://github.com/NaveenKumar-008/Mobile-Application-Development/assets/128135244/65457888-9a0f-453c-a7f0-238718ce93b3)
+![image](https://github.com/nithish143257/Mobile-Application-Development/assets/113762839/533a3bf4-7a74-437b-817f-f542b0f2b6cc)
 
 ## onPause()
-![image](https://github.com/NaveenKumar-008/Mobile-Application-Development/assets/128135244/65590a7f-907f-4322-a343-e0e9dfb07f04)
+![image](https://github.com/nithish143257/Mobile-Application-Development/assets/113762839/efedec58-6dd0-4c5f-8a0f-ad7a3f64c217)
 
 ## onResume()
-![image](https://github.com/NaveenKumar-008/Mobile-Application-Development/assets/128135244/54f82a3d-ab7a-4122-9c62-8465d6c1271f)
+![image](https://github.com/nithish143257/Mobile-Application-Development/assets/113762839/a18e8568-7622-4e23-8458-16889c617ab3)
 
 ## onDestroy()
-![image](https://github.com/NaveenKumar-008/Mobile-Application-Development/assets/128135244/832d0445-3278-48e4-b718-7f0c030f73d1)
+![image](https://github.com/nithish143257/Mobile-Application-Development/assets/113762839/9171418f-4bcf-4e7a-b560-9c5b97b54d31)
 
 ## onStop()
-![image](https://github.com/NaveenKumar-008/Mobile-Application-Development/assets/128135244/3e74dfc3-82a2-4c4e-86f4-1361d8b499ed)
+![image](https://github.com/nithish143257/Mobile-Application-Development/assets/113762839/6b5bea50-1a8d-4666-b650-724ad9633c70)
 
 ## RESULT:
 Thus a Simple Android Application create a HelloWorld Activity using all lifecycles methods to display messages using Android Studio is developed and executed successfully.
