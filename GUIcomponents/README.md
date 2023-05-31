@@ -148,8 +148,8 @@ Registeration Number :212221040115
 
 ## OUTPUT:
    
-  ![image](https://github.com/NaveenKumar-008/Mobile-Application-Development/assets/128135244/59eccc13-90e9-4e0c-9360-6007c82ee610)  
-  ![image](https://github.com/NaveenKumar-008/Mobile-Application-Development/assets/128135244/8dc521e7-3138-444e-a108-58762564cce0)
+  ![image](https://github.com/nithish143257/Mobile-Application-Development/assets/113762839/77ccc50a-bfa0-4736-a2b2-87ef154af6d1)  
+  ![image](https://github.com/nithish143257/Mobile-Application-Development/assets/113762839/2cb3a521-d85f-4c3c-a900-83dc0b932674)
 
 ## RESULT:
 Thus a Simple Android Application that uses GUI Components with Fonts and Colors using Android Studio is developed and executed successfully.
