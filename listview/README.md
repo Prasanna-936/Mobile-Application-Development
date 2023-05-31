@@ -220,8 +220,8 @@ Registeration Number : 212221040115
 
 ## OUTPUT:
    
-![image](https://github.com/NaveenKumar-008/Mobile-Application-Development/assets/128135244/d8bab5ec-6fad-4027-8cbe-2dd8fe761b86)  
-![image](https://github.com/NaveenKumar-008/Mobile-Application-Development/assets/128135244/f1e5827f-c4ce-4fed-bdd9-dbe8e676bcac)  
+![image](https://github.com/nithish143257/Mobile-Application-Development/assets/113762839/2e11e315-5bc3-48b3-b967-b8193ccae7a4)  
+![image](https://github.com/nithish143257/Mobile-Application-Development/assets/113762839/3c66cfd5-d1a7-45f4-8ddc-71798c935c87)
 
 ## RESULT:
 Thus a Simple Android Application to create and develop the application to display the place name with image using list view in android studio is developed and executed successfully.
