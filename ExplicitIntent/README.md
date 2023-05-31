@@ -1,20 +1,19 @@
-
-# Ex.No:5 Create Your Own Content Providers to get Contacts details.
+# Ex.No:4 To create a two screens , first screen will take one number input from user. After click on Factorial button, second screen will open and it should display factorial of the same number using Explicit Intents.
 
 
 ## AIM:
 
-To create your own content providers to get contacts details using Android Studio.
+To create a two screens , first screen will take one number input from user. After click on Factorial button, second screen will open and it should display factorial of the same number using Explicit Intents.
+
 
 ## EQUIPMENTS REQUIRED:
 
-Android Studio(Latest Version)
+Latest Version Android Studio
 
 ## ALGORITHM:
-
 Step 1: Open Android Stdio and then click on File -> New -> New project.
 
-Step 2: Then type the Application name as “contentprovider″ and click Next. 
+Step 2: Then type the Application name as HelloWorld and click Next. 
 
 Step 3: Then select the Minimum SDK as shown below and click Next.
 
@@ -22,20 +21,20 @@ Step 4: Then select the Empty Activity and click Next. Finally click Finish.
 
 Step 5: Design layout in activity_main.xml.
 
-Step 6: Get contacts details and Display details give in MainActivity file.
+Step 6: Display message give in MainActivity file.
 
 Step 7: Save and run the application.
 
 ## PROGRAM:
 ```
 /*
-Program to print the text create your own content providers to get contacts details.
+Program to print the text “ExplicitIntent”.
 Developed by: Nithish Kumar P
 Registeration Number : 212221040115
 */
 ```
 **Activity_xml File:**
-    
+
     <?xml version="1.0" encoding="utf-8"?>
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -44,85 +43,140 @@ Registeration Number : 212221040115
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button"
+    <EditText
+        android:id="@+id/numberEditText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="129dp"
-        android:layout_marginTop="302dp"
-        android:text="GET CONTACTS"
-        android:onClick="btnGetContactPressed"
+        android:layout_marginTop="172dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/factorialButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="340dp"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+**Activity_xml 2 File:**
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FactorialActivity">
+
+    <TextView
+        android:id="@+id/factorialTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="283dp"
+        android:text="TextView"
+        android:textSize="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
     
 **MainActivity.java File:**
 
-    package com.example.contactsgetter;
+    package com.example.factorialexplicit;
+
+    import static com.example.factorialexplicit.R.id.factorialButton;
+    import static com.example.factorialexplicit.R.id.numberEditText1;
 
     import androidx.appcompat.app.AppCompatActivity;
-    import androidx.core.app.ActivityCompat;
-    import androidx.core.content.ContextCompat;
 
-    import android.Manifest;
     import android.annotation.SuppressLint;
-    import android.content.ContentResolver;
-    import android.content.pm.PackageManager;
-    import android.database.Cursor;
-    import android.net.Uri;
+    import android.content.Intent;
     import android.os.Bundle;
-    import android.provider.ContactsContract;
-    import android.util.Log;
     import android.view.View;
-
+    import android.widget.Button;
+    import android.widget.EditText;
 
     public class MainActivity extends AppCompatActivity {
+    private EditText numberEditText;
+    private Button factorialButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        numberEditText = findViewById(R.id.numberEditText1);
+        factorialButton = findViewById(R.id.factorialButton);
 
-    //        Button show = (Button) findViewById(R.id.button2);
-    //        show.setOnClickListener(view->
-    //        {
-    //            getPhoneContacts();
-    //        });
+        factorialButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int number = Integer.parseInt(numberEditText.getText().toString());
 
-    }
-    private void getPhoneContacts(){
-        if(ContextCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this,new String[] {Manifest.permission.READ_CONTACTS},0);
-
-        }
-        ContentResolver contentResolver = getContentResolver();
-        Uri uri = ContactsContract.CommonDataKinds.Phone.CONTENT_URI;
-        Cursor cursor = contentResolver.query(uri,null,null,null,null);
-        Log.i("CONTACT_PROVIDER_DEMO","TOTAL # COUNTS :::"+cursor.getCount());
-        if(cursor.getCount() > 0)
-        {
-            while(cursor.moveToNext()){
-                @SuppressLint("Range") String contactName = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
-                @SuppressLint("Range") String contactNumber = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
-                Log.i("Content_provider_demo","Name: # "+contactName+"Number: # "+contactNumber);
+                Intent intent = new Intent(MainActivity.this, FactorialActivity.class);
+                intent.putExtra("number", number);
+                startActivity(intent);
             }
+        });
+    }
+    }
 
+**MainActivity.java 2 File:**
+ 
+    package com.example.factorialexplicit;
+
+    import static com.example.factorialexplicit.R.id.factorialTextView;
+
+    import androidx.appcompat.app.AppCompatActivity;
+
+    import android.annotation.SuppressLint;
+    import android.content.Intent;
+    import android.os.Bundle;
+    import android.widget.TextView;
+
+    public class FactorialActivity extends AppCompatActivity {
+    private TextView factorialTextView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_factorial);
+
+        factorialTextView = findViewById(R.id.factorialTextView);
+
+        Intent intent = getIntent();
+        int number = intent.getIntExtra("number", 0);
+
+        long factorial = calculateFactorial(number);
+        factorialTextView.setText("Factorial of " + number + " is " + factorial);
+    }
+
+    private long calculateFactorial(int number) {
+        long factorial = 1;
+        for (int i = 1; i <= number; i++) {
+            factorial *= i;
         }
-    }
-
-    public void btnGetContactPressed(View view) {
-        getPhoneContacts();
+        return factorial;
     }
     }
-
-
 
 ## OUTPUT:
 
-![image](https://github.com/NaveenKumar-008/Mobile-Application-Development/assets/128135244/e057b9fe-9a03-4b5e-b6ac-09d6b3f92037)
-![image](https://github.com/NaveenKumar-008/Mobile-Application-Development/assets/128135244/35c6c462-ab48-4703-9387-408286f77b9b)
-![image](https://github.com/NaveenKumar-008/Mobile-Application-Development/assets/128135244/07ea2207-a2d8-494d-b9e3-e579f308a3d1)
+![image](https://github.com/nithish143257/Mobile-Application-Development/assets/113762839/dbff15ef-b5f8-4cd2-881b-a61ecdeb8081)
+![image](https://github.com/nithish143257/Mobile-Application-Development/assets/113762839/5d7eb21d-b667-466e-9363-d57fd33751a8)
+![image](https://github.com/nithish143257/Mobile-Application-Development/assets/113762839/fe9d8fdb-95b6-41f0-ac31-2afac76583bc)
+
 
 ## RESULT:
-Thus a Simple Android Application create your own content providers to get contacts details using Android Studio is developed and executed successfully.
+Thus a Simple Android Application create a Explicit Intents using Android Studio is developed and executed successfully.
